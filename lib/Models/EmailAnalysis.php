@@ -46,17 +46,17 @@ class EmailAnalysis implements ModelInterface, ArrayAccess
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'EmailAnalysis';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'spam_verdict' => 'string',
         'virus_verdict' => 'string',
@@ -66,10 +66,10 @@ class EmailAnalysis implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'spam_verdict' => null,
         'virus_verdict' => null,
@@ -179,9 +179,9 @@ class EmailAnalysis implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -349,37 +349,27 @@ class EmailAnalysis implements ModelInterface, ArrayAccess
         return $this;
     }
     /**
-     * Returns true if offset exists. False otherwise.
-     *
-     * @param integer $offset Offset
-     *
-     * @return boolean
+     * {@inheritdoc}
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
     }
 
     /**
-     * Gets offset.
-     *
-     * @param integer $offset Offset
-     *
-     * @return mixed
+     * {@inheritdoc}
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
 
     /**
-     * Sets value based on offset.
-     *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
-     *
-     * @return void
+     * {@inheritdoc}
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -390,12 +380,9 @@ class EmailAnalysis implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Unsets offset.
-     *
-     * @param integer $offset Offset
-     *
-     * @return void
+     * {@inheritdoc}
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
